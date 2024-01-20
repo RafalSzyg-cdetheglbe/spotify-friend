@@ -14,14 +14,14 @@ export class SpotifyCallbackComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log('SpotifyCallbackComponent initialized');
+   console.log('SpotifyCallbackComponent initialized');
 
   const queryParams = this.route.snapshot.queryParams;
   const code = queryParams['code'];
   const state = queryParams['state'];
 
   console.log('Query Params:', queryParams);
-  console.log('Received Code:', code);
+ console.log('Received Code:', code);
   console.log('Received State:', state);
 
   if (code && state) {

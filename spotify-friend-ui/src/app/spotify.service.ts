@@ -58,8 +58,12 @@ export class SpotifyService {
           const accessToken = data.access_token;
           const refreshToken = data.refresh_token;
 
-          console.log('Access Token:', accessToken);
-          console.log('Refresh Token:', refreshToken);
+          localStorage.setItem('access_token', accessToken);
+          localStorage.setItem('refresh_token', refreshToken);
+
+
+        //  console.log('Access Token:', accessToken);
+         // console.log('Refresh Token:', refreshToken);
 
           this.router.navigate(['/dashboard']);
         },
