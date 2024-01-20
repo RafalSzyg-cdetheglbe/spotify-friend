@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -78,6 +79,15 @@ export class SpotifyService {
           this.router.navigate(['/dashboard']);
         }
       });
+  }
+
+  getMyProfile(): Observable<any> {
+    const accessToken = localStorage.getItem('access_token') || '';
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer ${accessToken}`
+    });
+
+    return this.http.get('https://api.spotify.com/v1/me', { headers });
   }
 
 }
