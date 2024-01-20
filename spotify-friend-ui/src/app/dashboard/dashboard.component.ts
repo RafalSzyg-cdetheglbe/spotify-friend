@@ -7,6 +7,7 @@ import { SpotifyService } from '../spotify.service';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
+  userProfile: any;
 
   constructor(private spotifyService: SpotifyService) {}
 
@@ -14,11 +15,10 @@ export class DashboardComponent implements OnInit {
     this.spotifyService.getMyProfile().subscribe(
       (data) => {
         console.log('User Profile:', data);
-        // Handle the user profile data here
+        this.userProfile = data
       },
       (error) => {
         console.error('Error fetching user profile:', error);
-        // Handle the error here
       }
     );
   }

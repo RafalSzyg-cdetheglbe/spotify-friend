@@ -1,1 +1,14 @@
-<p>dashboard works!</p>
+
+<div *ngIf="userProfile" class="user-profile">
+    <h2>User Profile</h2>
+    <div *ngIf="userProfile.images && userProfile.images.length > 0" class="profile-image-container">
+      <img [src]="userProfile.images[0].url" alt="Profile Image" width="50" height="50">
+    </div>
+    <p *ngIf="!userProfile.images || userProfile.images.length === 0">(no profile image)</p>
+    <p>Name: {{ userProfile.display_name }}</p>
+    <p>Email: {{ userProfile.email }}</p>
+  </div>
+  
+  <div *ngIf="!userProfile" class="loading-message">
+    <p>Loading user profile...</p>
+  </div>
