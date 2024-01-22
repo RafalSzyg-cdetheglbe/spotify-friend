@@ -1,14 +1,44 @@
+<div *ngIf="userProfile" class="center-dashboard">
+  <p-panel>
+    <ng-template pTemplate="header">
+      <span class="font-bold">User Profile</span>
 
-<div *ngIf="userProfile" class="user-profile">
-    <h2>User Profile</h2>
-    <div *ngIf="userProfile.images && userProfile.images.length > 0" class="profile-image-container">
-      <img [src]="userProfile.images[0].url" alt="Profile Image" width="50" height="50">
+    </ng-template>
+    <ng-template pTemplate="footer">
+      <div class="flex flex-wrap align-items-center justify-content-between gap-3">
+        <div class="flex align-items-center gap-2">
+          <p-button icon="pi pi-user" rounded="true" text="true"></p-button>
+          <p-button icon="pi pi-bookmark" severity="secondary" rounded="true" text="true"></p-button>
+        </div>
+      </div>
+    </ng-template>
+    <ng-template pTemplate="icons">
+    </ng-template>
+    <div class="flex align-items-center gap-2">
+      <div *ngIf="userProfile.images && userProfile.images.length > 0">
+
+        <p-avatar [image]="userProfile.images[0].url" shape="circle" size="xlarge"></p-avatar>
+
+      </div>
+
+      <p *ngIf="!userProfile.images || userProfile.images.length === 0">(no profile image)</p>
+      <p>Name: {{ userProfile.display_name }}</p>
+      <p>Email: {{ userProfile.email }}</p>
     </div>
-    <p *ngIf="!userProfile.images || userProfile.images.length === 0">(no profile image)</p>
-    <p>Name: {{ userProfile.display_name }}</p>
-    <p>Email: {{ userProfile.email }}</p>
-  </div>
-  
-  <div *ngIf="!userProfile" class="loading-message">
+    <p class="m-0">
+
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+
+  </p-panel>
+</div>
+
+<div *ngIf="!userProfile" class="center-dashboard">
+  <p-panel>
     <p>Loading user profile...</p>
-  </div>
+  </p-panel>
+  
+</div>
