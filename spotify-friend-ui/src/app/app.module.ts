@@ -7,6 +7,11 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SpotifyCallbackComponent } from './spotify-callback/spotify-callback.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+// Primeng imports
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ButtonModule } from 'primeng/button';
+import { PanelModule } from 'primeng/panel';
+import {AvatarModule} from 'primeng/avatar';
 
 @NgModule({
   declarations: [
@@ -18,7 +23,11 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    RouterModule
+    RouterModule,
+    BrowserAnimationsModule,
+    ButtonModule,
+    PanelModule,
+    AvatarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
