@@ -12,12 +12,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ButtonModule } from 'primeng/button';
 import { PanelModule } from 'primeng/panel';
 import {AvatarModule} from 'primeng/avatar';
+import { LoginComponentComponent } from './login-component/login-component.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SpotifyCallbackComponent,
-    DashboardComponent
+    DashboardComponent,
+    LoginComponentComponent
   ],
   imports: [
     BrowserModule,
