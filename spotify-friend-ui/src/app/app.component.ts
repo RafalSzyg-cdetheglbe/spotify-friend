@@ -8,12 +8,5 @@ import { SpotifyService } from './spotify.service';
 })
 export class AppComponent {
   title = 'spotify-friend-ui';
-
-
-  constructor(private spotifyService: SpotifyService) { }
-
-  login() {
-    this.spotifyService.login();
-  }
  
 }
