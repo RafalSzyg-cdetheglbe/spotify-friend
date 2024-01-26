@@ -1,3 +1,11 @@
-<img [src]="imageUrl" alt="Description of the image" class="small-image">
+
+<p-menubar [model]="items">
+  <ng-template pTemplate="start">
+      <img [src]="imageUrl" height="100" class="mr-2" />
+  </ng-template>
+  <ng-template pTemplate="end">
+      <app-login-component></app-login-component>
+  </ng-template>
+</p-menubar>
 
   <router-outlet></router-outlet>
