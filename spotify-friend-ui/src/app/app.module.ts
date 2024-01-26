@@ -13,13 +13,16 @@ import { ButtonModule } from 'primeng/button';
 import { PanelModule } from 'primeng/panel';
 import {AvatarModule} from 'primeng/avatar';
 import { LoginComponentComponent } from './login-component/login-component.component';
-
+import { TabMenuModule } from 'primeng/tabmenu';
+import { MenubarModule } from 'primeng/menubar';
+import { HomeComponent } from './home/home.component';
 @NgModule({
   declarations: [
     AppComponent,
     SpotifyCallbackComponent,
     DashboardComponent,
-    LoginComponentComponent
+    LoginComponentComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +32,9 @@ import { LoginComponentComponent } from './login-component/login-component.compo
     BrowserAnimationsModule,
     ButtonModule,
     PanelModule,
-    AvatarModule
+    AvatarModule,
+    TabMenuModule,
+    MenubarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

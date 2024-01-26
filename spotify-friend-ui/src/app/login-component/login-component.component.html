@@ -1,4 +1,6 @@
-<div class="center-button">
+<div *ngIf="!userProfile" class="center-button">
     <p-button label="Login with spotify" (click)="login()"></p-button>
 </div>
-
+<div *ngIf="userProfile" class="center-button">
+    <p-button label="Logout (not implemented)" ></p-button>
+</div>
