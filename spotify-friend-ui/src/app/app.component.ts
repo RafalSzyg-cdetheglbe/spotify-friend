@@ -8,5 +8,5 @@ import { SpotifyService } from './spotify.service';
 })
 export class AppComponent {
   title = 'spotify-friend-ui';
- 
+  imageUrl = '../assets/light_logo.png';
 }
