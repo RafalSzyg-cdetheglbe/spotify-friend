@@ -12,9 +12,9 @@ export class AppComponent {
   imageUrl = '../assets/light_logo.png';
   
   items: MenuItem[] = [
-    {label: 'Home', icon: 'pi pi-fw pi-calendar', routerLink: ['']},
-    {label: 'Dashboard', icon: 'pi pi-fw pi-home', routerLink: ['/dashboard']},
-    {label: 'Edit', icon: 'pi pi-fw pi-pencil'},
+    {label: 'Home', routerLink: ['']},
+    {label: 'Dashboard', routerLink: ['/dashboard']},
+    {label: 'Utwory'},
     {label: 'Documentation', icon: 'pi pi-fw pi-file'},
     {label: 'Settings', icon: 'pi pi-fw pi-cog'}
 ];
