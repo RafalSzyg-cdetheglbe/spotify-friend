@@ -1,8 +1,8 @@
 
 
-  @media screen and (min-width: 600px) {  
+  @media screen and (min-width: 800px) {  
     .center-dashboard {
-      width: 600px;
+      width: 800px;
       margin: 0 auto;
     }
   }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { SpotifyService } from '../spotify.service';
 
 @Component({
@@ -6,9 +6,12 @@ import { SpotifyService } from '../spotify.service';
   templateUrl: './login-component.component.html',
   styleUrls: ['./login-component.component.css']
 })
-export class LoginComponentComponent {
+export class LoginComponentComponent implements OnInit{
   userProfile: any;
-  constructor(private spotifyService: SpotifyService) { }
+
+  @Input() bigButton?: Boolean;
+
+  constructor(private spotifyService: SpotifyService) {}
 
   login() {
     this.spotifyService.login();

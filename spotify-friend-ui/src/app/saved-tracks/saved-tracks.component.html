@@ -1,6 +1,6 @@
 <!-- saved-tracks.component.html -->
 
-<div *ngIf="savedTracks && savedTracks.items.length > 0" class="center-dashboard">
+<div *ngIf="savedTracks && savedTracks.items.length > 0" class="center-content">
   <p-panel>
     <ng-template pTemplate="header">
       <span class="font-bold">Saved Tracks</span>
@@ -21,7 +21,7 @@
   </p-panel>
 </div>
 
-<div *ngIf="!savedTracks || savedTracks.items.length === 0" class="center-dashboard">
+<div *ngIf="!savedTracks || savedTracks.items.length === 0" class="center-content">
   <p-panel>
     <p>No saved tracks found</p>
   </p-panel>

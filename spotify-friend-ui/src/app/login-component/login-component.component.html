@@ -1,6 +1,9 @@
-<div *ngIf="!userProfile" class="center-button">
-    <p-button label="Login with spotify" (click)="login()"></p-button>
+<div *ngIf="!userProfile">
+    <p-button (click)="login()">
+        <span [ngClass]="{'big-button' : bigButton}" >Login with spotify</span>
+    </p-button>
 </div>
+
 <div *ngIf="userProfile" class="center-button">
-    <p-button label="Logout (not implemented)" ></p-button>
+        <p-button label="Logout (not implemented) "></p-button>
 </div>

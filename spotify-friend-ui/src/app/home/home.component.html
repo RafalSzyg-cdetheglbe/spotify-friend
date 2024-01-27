@@ -1,3 +1,27 @@
-<p>home works!</p>
+<div class="center-content">
+    <p-panel>
+      <ng-template pTemplate="header">
+        <span class="font-bold">Witaj</span>
+       
+      </ng-template>
 
-Siema, wybierz co chcesz zrobić
+      <div *ngIf ="!userProfile">Zaloguj się aby kontynuować i korzystać z aplikacji
+        <br>
+        <br>
+        <app-login-component [bigButton]='true'></app-login-component>
+      </div>
+
+      <div *ngIf ="userProfile">Skorzystaj z możliwości twojego przyjaciela spotify Spotify-friend.
+        <p class="m-0">
+            <p-button rounded="true" text="true">Wylosuj utwór</p-button>
+            <p-button rounded="true" text="true">Wyszukaj artystę</p-button>
+          </p>
+      </div>
+
+      <ng-template pTemplate="footer">
+      </ng-template>
+
+      <ng-template pTemplate="icons">
+      </ng-template>
+    </p-panel>
+  </div>
