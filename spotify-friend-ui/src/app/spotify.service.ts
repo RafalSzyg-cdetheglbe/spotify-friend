@@ -18,11 +18,11 @@ export class SpotifyService {
   constructor(private http: HttpClient, private router: Router) { }
 
   login() {
-    
+
     const authorizeUrl = `${this.authorizationEndpoint}?` +
       `response_type=${this.responseType}` +
       `&client_id=${this.clientId}` +
-      `&scope=${this.scope}` +
+      `&scope=${this.scope} user-library-read`+
       `&redirect_uri=${this.redirectUri}` +
       `&state=${this.state}`;
       console.log('Login method called');
@@ -48,7 +48,8 @@ export class SpotifyService {
     const body = new HttpParams()
       .set('code', code)
       .set('redirect_uri', this.redirectUri)
-      .set('grant_type', 'authorization_code');
+      .set('grant_type', 'authorization_code')
+      .set('scope', 'user-library-read');
 
       console.log('Token Exchange Request Body:', body.toString());
 
@@ -86,8 +87,16 @@ export class SpotifyService {
     const headers = new HttpHeaders({
       'Authorization': `Bearer ${accessToken}`
     });
-
     return this.http.get('https://api.spotify.com/v1/me', { headers });
+  }
+
+  getSavedTracks() : Observable<any> {
+    const accessToken = localStorage.getItem('access_token') || '';
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer ${accessToken}`
+    });
+
+    return this.http.get('https://api.spotify.com/v1/me/tracks', { headers });
   }
 
 }

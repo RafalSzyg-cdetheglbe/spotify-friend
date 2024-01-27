@@ -1,0 +1,23 @@
+.track-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.album-image {
+  width: 20%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.track-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.play-button {
+  margin-top: 10px;
+}

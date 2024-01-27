@@ -1,0 +1,28 @@
+<!-- saved-tracks.component.html -->
+
+<div *ngIf="savedTracks && savedTracks.items.length > 0" class="center-dashboard">
+  <p-panel>
+    <ng-template pTemplate="header">
+      <span class="font-bold">Saved Tracks</span>
+    </ng-template>
+
+    <ng-template pTemplate="icons"></ng-template>
+
+    <div *ngFor="let track of savedTracks.items" class="track-item">
+      <img *ngIf="track.track.album.images.length > 0" [src]="track.track.album.images[0].url" alt="Album Artwork" class="album-image">
+      <div class="track-details">
+        <strong>{{ track.track.name }}</strong> - {{ track.track.artists[0].name }}
+        <p-button label="Play" icon="pi pi-play" (click)="playAlbum(track.track.album.uri)" class="play-button"></p-button>
+      </div>
+    </div>
+
+    <p *ngIf="savedTracks && savedTracks.items.length === 0">(No saved tracks found)</p>
+
+  </p-panel>
+</div>
+
+<div *ngIf="!savedTracks || savedTracks.items.length === 0" class="center-dashboard">
+  <p-panel>
+    <p>No saved tracks found</p>
+  </p-panel>
+</div>
