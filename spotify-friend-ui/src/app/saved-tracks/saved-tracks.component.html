@@ -12,7 +12,7 @@
       <img *ngIf="track.track.album.images.length > 0" [src]="track.track.album.images[0].url" alt="Album Artwork" class="album-image">
       <div class="track-details">
         <strong>{{ track.track.name }}</strong> - {{ track.track.artists[0].name }}
-        <p-button label="Play" icon="pi pi-play" (click)="playAlbum(track.track.album.uri)" class="play-button"></p-button>
+        <p-button label="Play" icon="pi pi-play" (click)="redirectToSpotify(track.track.external_urls.spotify)"></p-button>
       </div>
     </div>
 
