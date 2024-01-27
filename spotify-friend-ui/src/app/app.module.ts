@@ -16,13 +16,15 @@ import { LoginComponentComponent } from './login-component/login-component.compo
 import { TabMenuModule } from 'primeng/tabmenu';
 import { MenubarModule } from 'primeng/menubar';
 import { HomeComponent } from './home/home.component';
+import { SavedTracksComponent } from './saved-tracks/saved-tracks.component';
 @NgModule({
   declarations: [
     AppComponent,
     SpotifyCallbackComponent,
     DashboardComponent,
     LoginComponentComponent,
-    HomeComponent
+    HomeComponent,
+    SavedTracksComponent
   ],
   imports: [
     BrowserModule,
