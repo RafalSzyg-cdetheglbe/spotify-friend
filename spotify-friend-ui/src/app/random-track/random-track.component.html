@@ -1,0 +1,28 @@
+<div class="center-content">
+  <button (click)="getRandomTrack()" class="p-button p-button-raised p-button-primary">Get Random Track</button>
+</div>
+
+<div *ngIf="randomTrack && randomTrack.name" class="center-content">
+  <p-panel class="random-track-panel">
+    <ng-template pTemplate="header">
+      <span class="font-bold">Random Track</span>
+    </ng-template>
+
+    <ng-template pTemplate="icons"></ng-template>
+
+    <div class="track-details">
+      <img *ngIf="randomTrack.album?.images && randomTrack.album.images.length > 0" [src]="randomTrack.album.images[0]?.url" alt="Track Image" class="album-image">
+      <div>
+        <strong>{{ randomTrack.name }}</strong> - {{ randomTrack.artists[0]?.name }}
+      </div>
+      <button class="p-button p-button-rounded p-button-outlined p-button-primary play-button" (click)="redirectToSpotify(randomTrack.external_urls.spotify)">Play
+        <i class="pi pi-play"></i>
+      </button>
+      <button class="p-button p-button-rounded p-button-outlined p-button-primary save-button" (click)="saveTrack(randomTrack.id)">Save Track</button>
+
+    </div>
+
+    <p *ngIf="!randomTrack">(No random track found)</p>
+  </p-panel>
+</div>
+

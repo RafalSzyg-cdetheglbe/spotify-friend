@@ -17,6 +17,7 @@ import { TabMenuModule } from 'primeng/tabmenu';
 import { MenubarModule } from 'primeng/menubar';
 import { HomeComponent } from './home/home.component';
 import { SavedTracksComponent } from './saved-tracks/saved-tracks.component';
+import { RandomTrackComponent } from './random-track/random-track.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +25,8 @@ import { SavedTracksComponent } from './saved-tracks/saved-tracks.component';
     DashboardComponent,
     LoginComponentComponent,
     HomeComponent,
-    SavedTracksComponent
+    SavedTracksComponent,
+    RandomTrackComponent
   ],
   imports: [
     BrowserModule,
