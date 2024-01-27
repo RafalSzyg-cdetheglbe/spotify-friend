@@ -8,7 +8,7 @@ import { SpotifyService } from '../spotify.service';
 })
 export class DashboardComponent implements OnInit {
   userProfile: any;
-
+  saved: string = '/saved';
   constructor(private spotifyService: SpotifyService) {}
 
   ngOnInit(): void {
