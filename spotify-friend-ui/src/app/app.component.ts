@@ -14,7 +14,7 @@ export class AppComponent {
   items: MenuItem[] = [
     {label: 'Home', routerLink: ['']},
     {label: 'Dashboard', routerLink: ['/dashboard']},
-    {label: 'Utwory'},
+    {label: 'Your saved tracks', routerLink: ['/saved']},
     {label: 'Documentation', icon: 'pi pi-fw pi-file'},
     {label: 'Settings', icon: 'pi pi-fw pi-cog'}
 ];
