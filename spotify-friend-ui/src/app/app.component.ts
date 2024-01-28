@@ -10,12 +10,24 @@ import { MenuItem } from 'primeng/api/menuitem';
 export class AppComponent {
   title = 'spotify-friend-ui';
   imageUrl = '../assets/light_logo.png';
+  userProfile: any
 
   items: MenuItem[] = [
-    {label: 'Home', routerLink: ['']},
-    {label: 'Dashboard', routerLink: ['/dashboard']},
-    {label: 'Your saved tracks', routerLink: ['/saved']},
-    {label: 'Randomizer', routerLink: ['/random']},
-    {label: 'Settings', icon: 'pi pi-fw pi-cog'}
+    {label: 'Home', icon: 'pi pi-home', routerLink: ['']},
+    {label: 'Dashboard', icon: 'pi pi-user', routerLink: ['/dashboard']},
+    {label: 'Your saved tracks', icon: 'pi pi-cog',  routerLink: ['/saved']},
+    {label: 'Randomizer', icon: 'pi pi-spin pi-refresh', routerLink: ['/random']}
 ];
+
+constructor(private spotifyService: SpotifyService) {
+  this.spotifyService.getMyProfile().subscribe(
+    (data) => {
+      this.userProfile = data
+    },
+    (error) => {
+      console.error('Error fetching user profile:', error);
+    }
+  );
+ }
+
 }
