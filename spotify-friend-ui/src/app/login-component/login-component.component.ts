@@ -16,8 +16,12 @@ export class LoginComponentComponent implements OnInit{
   login() {
     this.spotifyService.login();
   }
+  logout() {
+    this.spotifyService.logout();
+    window.location.reload()
+  }
 
-  ngOnInit(): void {
+  updateUserProfile(){
     this.spotifyService.getMyProfile().subscribe(
       (data) => {
         console.log('User Profile:', data);
@@ -27,5 +31,8 @@ export class LoginComponentComponent implements OnInit{
         console.error('Error fetching user profile:', error);
       }
     );
+  }
+  ngOnInit(): void {
+    this.updateUserProfile()
   }
 }

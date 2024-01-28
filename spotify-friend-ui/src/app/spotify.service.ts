@@ -107,7 +107,7 @@ export class SpotifyService {
 
     const playlistId = '4rnleEAOdmFAbRcNCgZMpY';
     const pageSize = 100;
-    const numberOfPages = 50;
+    const numberOfPages = 1;
 
     let allTracks: any[] = [];
 
@@ -151,4 +151,9 @@ export class SpotifyService {
 
     return this.http.put<any>(endpoint, body, { headers });
   }
+
+  logout(){
+    localStorage.clear();
+  }
+
 }
