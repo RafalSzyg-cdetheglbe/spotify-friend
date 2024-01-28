@@ -10,12 +10,12 @@ import { MenuItem } from 'primeng/api/menuitem';
 export class AppComponent {
   title = 'spotify-friend-ui';
   imageUrl = '../assets/light_logo.png';
-  
+
   items: MenuItem[] = [
     {label: 'Home', routerLink: ['']},
     {label: 'Dashboard', routerLink: ['/dashboard']},
     {label: 'Your saved tracks', routerLink: ['/saved']},
-    {label: 'Documentation', icon: 'pi pi-fw pi-file'},
+    {label: 'Randomizer', routerLink: ['/random']},
     {label: 'Settings', icon: 'pi pi-fw pi-cog'}
 ];
 }
