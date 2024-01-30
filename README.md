@@ -1,6 +1,6 @@
 # Spotify Friend
 
-![Project Logo](logo.png)
+![Project Logo](logo.png | width=100)
 
 Welcome to Spotify Friend! This application allows you to interact with your Spotify account, explore your liked songs, generate random song recommendations, and like the randomized songs.
 
@@ -48,7 +48,7 @@ Found a gem in your randomized suggestions? Hit the "Like" button to add it to y
 - Spotify API
 - HTML/CSS
 - TypeScript
-- Bootstrap (for styling)
+-Angular gnenerally :D
 
 ## Contributing
 
