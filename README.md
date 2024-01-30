@@ -29,9 +29,13 @@ Welcome to Spotify Friend! This application allows you to interact with your Spo
 
 View a list of your liked songs directly from your Spotify account. You can explore your favorite tracks and artists easily.
 
+![screenshot1](app1.jpg)
+
 ### 2. Generate Random Song
 
 Feeling adventurous? Click the "Generate Random Song" button to receive a personalized song recommendation based on your listening preferences.
+
+![screenshot2](app2.jpg)
 
 ### 3. Like Randomized Song
 
