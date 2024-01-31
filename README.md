@@ -1,6 +1,6 @@
 # Spotify Friend
 
-<img src="logo.png" alt="Project Logo" width="100"/>
+<img src="logo.png" alt="Project Logo" width="250"/>
 
 Welcome to Spotify Friend! This application allows you to interact with your Spotify account, explore your liked songs, generate random song recommendations, and like the randomized songs.
 
